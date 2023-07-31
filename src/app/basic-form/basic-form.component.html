@@ -1,0 +1,33 @@
+<!-- <p>basic-form works!</p> -->
+<form [formGroup]="myForm">
+
+  Value: {{ myForm.value | json }}
+
+  <hr>
+  <mat-form-field>
+    <input matInput placeholder="Enter email" formControlName="email">
+  </mat-form-field>
+
+  <h4>Home Phone</h4>
+
+  <div formGroupName="homePhone">
+    <mat-form-field>
+      <input matInput placeholder="Enter area" formControlName="area">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter prefix" formControlName="prefix">
+    </mat-form-field>
+  </div>
+
+  <h4>Cell Phone</h4>
+
+  <div formGroupName="cellPhone">
+    <mat-form-field>
+      <input matInput placeholder="Enter area" formControlName="area">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Enter prefix" formControlName="prefix">
+    </mat-form-field>
+  </div>
+
+</form>

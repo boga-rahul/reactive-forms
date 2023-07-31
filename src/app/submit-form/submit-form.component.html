@@ -1,0 +1,17 @@
+<!-- <p>basic-form works!</p> -->
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+
+  Value: {{ myForm.value | json }}
+
+  <hr>
+  <mat-form-field>
+    <input matInput placeholder="Enter email" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="password" placeholder="Enter password" formControlName="password">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" [disabled]="myForm.invalid">Submit</button>
+
+</form>
